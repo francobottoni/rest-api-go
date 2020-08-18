@@ -1,0 +1,13 @@
+Se utilizo docker como contenedor de Postgress para realizar la conexion con la base de datos.
+
+
+- $ docker pull postgres
+- $ docker run -p 5432:5432 --name yourContainerName -e POSTGRES_PASSWORD = yourPassword -d --volumes-from PostgresData postgres
+- $ docker start yourContainerName
+- $ winpty docker exec -it some-postgres psql -U postgres
+
+CREATE DATABASE todos_db;
+
+CREATE TABLE todos (id SERIAL PRIMARY KEY, description VARCHAR NOT NULL);
+
+Table -> todos (id Primary Key, description Varchar)
